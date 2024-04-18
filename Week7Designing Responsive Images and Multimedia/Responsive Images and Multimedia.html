@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Multimedia</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        img, video, iframe {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .media {
+            height: fit-content;
+            margin: 10px;
+            max-width: 40%;
+        }
+
+        @media (max-width: 768px) {
+            .media {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="media">
+        <img src="#" alt="Responsive Image">
+    </div>
+
+    <div class="media">
+        <video controls>
+            <source src="videos/What%20the%20Hell%20are%20Chao%20.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <div class="media">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/seFHSuL0nsw?si=-TfUctlMsy1-8dVh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+</div>
+</body>
+</html>
